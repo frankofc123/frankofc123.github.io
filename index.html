@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="gamescript.js"></script>
+    
+</head>
+<body onload="pageload()">
+<h1 class="header">Tic Tac Toe</h1>
+
+<div>
+<p id="intro">Tic-tac-toe is a game in which two players take turns in drawing either an ' O' or an ' X' 
+    in one square of a grid consisting of nine squares. The winner is the first player to get three 
+    of the same symbols in a row. To make the game a little more interesting we use company logos instead of an 'O' or an 'X' &#128540</p>
+</div>
+
+<div>
+<h3 id="header3">To start the game please select a company you want to play against and click on "Let the game begin"</h3>
+
+<div id="vendortable">
+<label>
+    <input id="selectO2" type="radio" name="vendor" value="small">
+    <img class="vendor" src="img/o2.png" >
+  </label>
+  
+  <label>
+    <input id="selectVodafone" type="radio" name="vendor" value="big">
+    <img class="vendor" src="img/vodafone.png" >
+  </label>
+
+  <label>
+    <input id="selectAtt" type="radio" name="vendor" value="big">
+    <img class="vendor" src="img/att.png" >
+  </label>
+</div>
+<br>
+
+<button id="start" onclick="startGame()">Let the game begin!</button>
+<p id="infotext"></p>
+
+<div id="playground">
+    <table class="gametable">
+        <tr>
+            <td id="field1" class="cellclass"><button class="playbutton" id="buttonfield1" onclick="selectField1()">1</button></td>
+            <td id="field2" class="cellclass"><button class="playbutton" id="buttonfield2" onclick="selectField2()">2</button></td>
+            <td id="field3" class="cellclass"><button class="playbutton" id="buttonfield3" onclick="selectField3()">3</button></td>
+        </tr>
+        <tr>
+            <td id="field4" class="cellclass"><button class="playbutton" id="buttonfield4" onclick="selectField4()">4</button></td>
+            <td id="field5" class="cellclass"><button class="playbutton" id="buttonfield5" onclick="selectField5()">5</button></td>
+            <td id="field6" class="cellclass"><button class="playbutton" id="buttonfield6" onclick="selectField6()">6</button></td>
+        </tr>
+        <tr>
+            <td id="field7" class="cellclass"><button class="playbutton" id="buttonfield7" onclick="selectField7()">7</button></td>
+            <td id="field8" class="cellclass"><button class="playbutton" id="buttonfield8" onclick="selectField8()">8</button></td>
+            <td id="field9" class="cellclass"><button class="playbutton" id="buttonfield9" onclick="selectField9()">9</button></td>
+        </tr>
+    </table>
+</div>
+
+</div>
+<div>
+<p id="congrats"></p>
+<p id="losing"></p>
+
+<button id="returnbutton" onclick="endGame()">Return</button>
+</div>
+</body>
+
+</html>
